@@ -52,3 +52,27 @@ It's breakfast
 
 (Dikkat: "It's " ile "breakfast " aynı satırda, sonra newline geliyor.)
 */
+# Exercise 4.5 – zoop ikinci kez çağrıldığında stack diyagramı
+
+İkinci zoop çağrısı şu satırdan geliyor:
+
+clink(4) içinde:
+    zoop("breakfast ", fork);  // fork = 4
+
+Bu anda stack (en üstte aktif olan frame):
+
++------------------------------+
+| Frame: zoop                  |
+| fred = "breakfast "         |
+| bob  = 4                    |
++------------------------------+
+| Frame: clink                |
+| fork = 4                    |
++------------------------------+
+| Frame: main                 |
+| bizz = 5                    |
+| buzz = 2                    |
++------------------------------+
+
+Bu çağrıda `bob == 5` olmadığı için `ping` çağrılmıyor,
+sadece `"breakfast "` ve `"!"` yazılıyor.
