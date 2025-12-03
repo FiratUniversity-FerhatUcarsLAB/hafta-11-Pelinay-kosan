@@ -1,21 +1,39 @@
+
 public class Exercise4_4 {
 
-    public static int getNumber() {
-        return 42;
+    // value (değer döndüren) method
+    public static double square(double x) {
+        return x * x;
     }
 
-    public static void sayHello() {
-        System.out.println("hello");
+    // void method
+    public static void sayBoo() {
+        System.out.println("boo!");
     }
 
     public static void main(String[] args) {
 
-        // 1) Donus degerini kullanmayin -> ne oluyor?
-        getNumber();
+        // 1) Değer döndüren metodu çağırıp sonucu kullanmamak:
+        square(5.0); // Bu derlenir ve çalışır, sadece sonucu hiçbir yere kaydetmezsiniz.
 
-        // 2) void metodu ifade icinde kullanin -> ne oluyor?
-        // System.out.println(sayHello() + 7);
+        // 2) void metodu ifadenin içinde kullanmak:
+        // Aşağıdaki satırı açarsan derleme HATASI verir:
+        // double test = sayBoo() + 7;
 
-        // Cevaplarinizi yorum olarak ekleyin.
+        // Hata: "void method cannot be used in an expression" benzeri bir şey olacaktır.
     }
 }
+
+/*
+Cevaplar (Türkçe özet):
+
+1) Değer döndüren metodu çağırıp sonucu kullanmazsan ne olur?
+   → Program sorunsuz derlenir ve çalışır. Metot yine hesaplar, geri döner ama
+     sonucu hiçbir değişkende tutulmadığı için "çöpe gider". Derleyici uyarı verebilir
+     ama hata değildir.
+
+2) void metodu bir ifadenin içinde kullanırsan ne olur?
+   → Derleyici HATA verir.
+     Çünkü void metotlar değer döndürmez; +, -, vs. ile kullanılan bir ifade içinde
+     kullanılmaları mümkün değildir.
+*/
