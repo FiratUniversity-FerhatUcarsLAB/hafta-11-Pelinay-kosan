@@ -13,8 +13,8 @@ public class Exercise4_1 {
     public static void main(String[] args) {
         String day = "Saturday";
         int date = 22;
-        String month = "July";
-        int year = 2015;
+        String month = "February";
+        int year = 2022;
 
         System.out.println("American format:");
         printAmerican(day, date, month, year);
