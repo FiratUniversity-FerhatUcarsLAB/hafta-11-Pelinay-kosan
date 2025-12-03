@@ -1,3 +1,4 @@
+
 public class Exercise4_3 {
 
     public static void zoop() {
@@ -22,3 +23,16 @@ public class Exercise4_3 {
         System.out.println(".");
     }
 }
+
+/*
+Program çıktısı (satır satır):
+
+No, I wug.
+You wugga wug.
+I wug.
+
+(Daha açık yazarsak, aradaki boşluklarla birlikte:)
+"No, I " + "wug" + "." + \n
+"You wugga " + "wug" + "." + \n
+"I " + "wug" + "." + \n
+*/
