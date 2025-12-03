@@ -36,3 +36,26 @@ I wug.
 "You wugga " + "wug" + "." + \n
 "I " + "wug" + "." + \n
 */
+# Exercise 4.3 – ping ilk çağrıldığında stack diyagramı
+
+ping ilk kez çağrıldığı an:
+
+- `main` başladı, `zoop()` çağrıldı.
+- `zoop()` içinden `baffle()` çağrıldı.
+- `baffle()` içinden `ping()` çağrıldı.
+
+Stack (üstten alta doğru main → ping) genelde aşağı doğru çizilir:
+
++----------------------+
+| Frame: ping          |
+| (parametre yok)      |
++----------------------+
+| Frame: baffle        |
+| (parametre yok)      |
++----------------------+
+| Frame: zoop          |
+| (parametre yok)      |
++----------------------+
+| Frame: main          |
+| args : String[]      |
++----------------------+
