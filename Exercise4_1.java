@@ -1,14 +1,25 @@
 public class Exercise4_1 {
 
+    // American format: Saturday, July 22, 2015
     public static void printAmerican(String day, int date, String month, int year) {
-        // TODO
+        System.out.println(day + ", " + month + " " + date + ", " + year);
     }
 
+    // European format: Saturday 22 July 2015
     public static void printEuropean(String day, int date, String month, int year) {
-        // TODO
+        System.out.println(day + " " + date + " " + month + " " + year);
     }
 
     public static void main(String[] args) {
-        // TODO: test methods
+        String day = "Saturday";
+        int date = 22;
+        String month = "July";
+        int year = 2015;
+
+        System.out.println("American format:");
+        printAmerican(day, date, month, year);
+
+        System.out.println("European format:");
+        printEuropean(day, date, month, year);
     }
 }
